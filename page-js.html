@@ -1,0 +1,13 @@
+<script>
+  document.getElementById("pscan").addEventListener("input", scanCode);
+
+  function scanCode() {
+    var pCode = document.getElementById("pscan").value;
+    if (pCode.length === 28) {
+      var scannedData = pCode.toString().replace(/%DE130SH/g, ""); //removes uneccessary parts of the string
+      var scannedData2 = scannedData.replace(/101826/g, ""); //removes uneccessary parts of the string
+      google.script.run.userClicked(scannedData2);
+      scannedData2 = document.getElementById("pscan").value = ""; //setting input box to null
+    }
+  }
+</script>
