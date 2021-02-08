@@ -8,3 +8,4 @@
  I plan to add few more scanning options as I have more spreadsheets that I need to scan into.
 
  Created and modified based on a series of YT tutorials by Learn Google Spreadsheets
+ https://youtube.com/playlist?list=PLv9Pf9aNgemt82hBENyneRyHnD-zORB3l
