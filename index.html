@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <?!= include("page-css"); ?>
+  </head>
+  <body>
+     <div class="container2">
+        <h3><?=day;?></h3>
+     </div>
+     
+  <div class="row">
+    <form class="col s12 m6 l3">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="DPD Parcel Scan" id="dpdscan" type="text" class="validate">
+          <label for="DPD SCAN">DPD SCAN</label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="EAN SCAN" id="EAN" type="text" class="validate">
+          <label for="EAN">EAN SCAN</label>
+        </div>
+      </div>
+
+    
+   
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <?!= include("page-js"); ?>
+  </body>
+
+</html>
