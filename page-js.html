@@ -1,23 +1,26 @@
 <script>
-  document.getElementById("dpdscan").addEventListener("input", dpdParcel);
 
-  function dpdParcel() {
-    var pCode = document.getElementById("dpdscan").value;
-    if (pCode.length === 28) {
-      var scannedData = pCode.toString().replace(/%DE130SH/g, ""); //removes uneccessary parts of the string
-      var scannedData2 = scannedData.replace(/101826/g, ""); //removes uneccessary parts of the string
-      google.script.run.userClicked(scannedData2);
-      scannedData2 = document.getElementById("dpdscan").value = ""; //setting input box to null
-    }
-  }
+    document.getElementById("dpdscan").addEventListener("input",dpdParcel);
 
-  document.getElementById("EAN").addEventListener("input", eanItem);
-  function eanItem() {
-    var eanCode = document.getElementById("EAN").value;
-    if (eanCode.length === 13) {
-      var eanData = eanCode.toString();
-      google.script.run.eanScanned(eanData);
-      eanScanned = document.getElementById("EAN").value = ""; //setting input box to null
+    function dpdParcel(){
+      var pCode = document.getElementById("dpdscan").value;
+      if(pCode.length === 28){
+      
+        var scannedData = pCode.toString().replace(/%DE130SH/g, ''); //removes uneccessary parts of the string
+        var scannedData2 = scannedData.replace(/101826/g, '');       //removes uneccessary parts of the string
+        google.script.run.userClicked(scannedData2);
+        scannedData2 = document.getElementById("dpdscan").value = ""; //setting input box to empty       
+      }
     }
-  }
-</script>
+
+    document.getElementById("EAN").addEventListener("input",eanItem);
+    function eanItem(){
+      var eanCode = document.getElementById("EAN").value;
+      if(eanCode.length === 13){
+        var eanData = eanCode.toString()
+        google.script.run.eanScanned(eanData);
+        eanScanned = document.getElementById("EAN").value = ""; //setting input box to empty
+      }
+    }
+
+    </script>

@@ -9,22 +9,31 @@
   <?!= include("page-css"); ?>
   </head>
   <body>
-     <div class="container2">
-        <h3><?=day;?></h3>
+     <div class="row">
+      <div class="col s12"><h2 class="center-align"><?=day;?></h2> </div>
      </div>
-     
-  <div class="row">
-    <form class="col s12 m6 l3">
-      <div class="row">
-        <div class="input-field col s6">
+    
+      <div class="wrapWrap">
+      <div class="wrap z-depth-3"> 
+        <div class="card-panel grey lighten-5">
+      <div class="col s6">
+        <div class="input-field col s12">
           <input placeholder="DPD Parcel Scan" id="dpdscan" type="text" class="validate">
           <label for="DPD SCAN">DPD SCAN</label>
         </div>
-        <div class="input-field col s6">
-          <input placeholder="EAN SCAN" id="EAN" type="text" class="validate">
+        </div>
+        </div>
+        <div class="co s6">
+         <div class="card-panel grey lighten-5">
+         <div class="input-field col s12">
+         <input placeholder="EAN Scan" id="EAN" type="text" class="validate">
           <label for="EAN">EAN SCAN</label>
         </div>
+         </div>
       </div>
+      </div>
+      </div>
+     
 
     
    
